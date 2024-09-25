@@ -6,7 +6,7 @@
     <title>Bleron Pllana - Applikationsentwickler</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #1A2B47;
             color: #ffffff;
             margin: 0;
@@ -17,33 +17,63 @@
             padding: 20px;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #112240;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #CCD6F6;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #64FFDA;
         }
         section {
             margin: 40px;
         }
         h2 {
-            color: #CCD6F6;
+            color: #64FFDA;
+            font-size: 2em;
+            border-bottom: 2px solid #64FFDA;
+            display: inline-block;
         }
-        a {
-            color: #1FA2FF;
-            text-decoration: none;
+        .content {
+            line-height: 1.6;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        .contact-info {
+        .skills-icons {
+            display: flex;
+            justify-content: space-evenly;
             margin-top: 20px;
+        }
+        .skills-icons img {
+            width: 50px;
+            height: 50px;
         }
         footer {
             background-color: #0F1D35;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            color: #ffffff;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info a {
+            color: #64FFDA;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -51,28 +81,59 @@
 
 <header>
     <h1>Bleron Pllana</h1>
-    <p>Applikationsentwickler</p>
+    <p>Applikationsentwickler und Webentwickler</p>
 </header>
 
-<section>
+<nav>
+    <a href="#about">Über mich</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#resume">Lebenslauf</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section id="about">
     <h2>Über mich</h2>
-    <p>Ich bin ein angehender Applikationsentwickler mit einer Leidenschaft für strukturierte und eigenständige Arbeitsweisen. Meine Ausbildung an der Computerschule Bern hat mir solide Kenntnisse in Programmiersprachen, Webentwicklung und Datenbankmanagement vermittelt. Als Teamplayer ist es mir wichtig, motivierende und unterstützende Beziehungen zu meinen Kollegen aufzubauen, um gemeinsam erfolgreich zu sein.</p>
+    <div class="content">
+        <p>Als ambitionierter Applikationsentwickler verfolge ich das Ziel, innovative und benutzerfreundliche Lösungen zu entwickeln. Mit meiner Ausbildung an der Computerschule Bern und meiner praktischen Erfahrung in verschiedenen Projekten habe ich umfassende Kenntnisse in der Software- und Webentwicklung erworben.</p>
+        <p>Meine Stärken liegen in der strukturierten und eigenständigen Arbeitsweise, kombiniert mit einer großen Leidenschaft für technologische Weiterentwicklungen. Ich arbeite gerne im Team, pflege dabei motivierende Beziehungen und freue mich darauf, gemeinsam Großartiges zu schaffen.</p>
+        
+        <!-- Fähigkeiten mit Icons -->
+        <h3>Fähigkeiten</h3>
+        <div class="skills-icons">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/html-5.png" alt="HTML5">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/css3.png" alt="CSS3">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/javascript.png" alt="JavaScript">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/database.png" alt="Datenbanken">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/cloud.png" alt="Cloud-Technologien">
+        </div>
+    </div>
 </section>
 
-<section>
+<section id="portfolio">
     <h2>Portfolio</h2>
-    <p>In meinem Portfolio findest du Projekte, die ich während meiner Ausbildung und Arbeitserfahrung erstellt habe. Diese umfassen die Entwicklung von Benutzeroberflächen, das Erstellen von Webseiten und die Arbeit mit Datenbanksystemen. Mehr Details zu den Projekten folgen bald.</p>
+    <div class="content">
+        <p>Hier sind einige meiner bisherigen Projekte:</p>
+        <ul>
+            <li>Web-Apps mit JavaScript und React</li>
+            <li>Design und Implementierung von Datenbanksystemen mit MySQL</li>
+            <li>Erstellung von dynamischen Webseiten mit HTML5, CSS3 und JavaScript</li>
+            <li>Entwicklung von Cloud-basierten Lösungen mit GCloud</li>
+        </ul>
+        <p>Mehr Details und Beispiele meiner Arbeit findest du bald hier!</p>
+    </div>
 </section>
 
-<section>
+<section id="resume">
     <h2>Lebenslauf</h2>
-    <p>Du kannst meinen vollständigen Lebenslauf <a href="/path-to-your-pdf/Lebenslauf_Bleron_Pllana.pdf" target="_blank">hier herunterladen</a>.</p>
+    <div class="content">
+        <p>Du kannst meinen vollständigen Lebenslauf <a href="/path-to-your-pdf/Lebenslauf_Bleron_Pllana.pdf" target="_blank">hier herunterladen</a>.</p>
+    </div>
 </section>
 
-<section>
+<section id="contact">
     <h2>Kontakt</h2>
-    <p>Hast du Interesse, mehr über mich zu erfahren oder mit mir zusammenzuarbeiten? Ich freue mich, von dir zu hören!</p>
     <div class="contact-info">
+        <p>Hast du Interesse, mehr über mich zu erfahren oder mit mir zusammenzuarbeiten? Ich freue mich, von dir zu hören!</p>
         <p><strong>E-Mail:</strong> <a href="mailto:bleron.p04@gmail.com">bleron.p04@gmail.com</a></p>
         <p><strong>Telefon:</strong> <a href="tel:+41764137015">+41 76 413 70 15</a></p>
     </div>
